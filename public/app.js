@@ -1,8 +1,10 @@
+
+var payloads = [];
 const CreateUser = document.querySelector('.create_payload')
 CreateUser.addEventListener('submit', (e) => {
   e.preventDefault()
-  const username = CreateUser.querySelector('.username').value
-  const password = CreateUser.querySelector('.password').value
+  const username = CreateUser.querySelector('.payload').value
+  const password = CreateUser.querySelector('.time_stamp').value
   post('/api', { username, password })
 })
 
@@ -27,4 +29,11 @@ function post (path, data) {
     },
     body: JSON.stringify(data)
   })
+}
+
+function addPayload(){
+  const username = CreateUser.querySelector('.payload').value
+  const password = CreateUser.querySelector('.time_stamp').value
+  console.log(username);
+  console.log(password);
 }
