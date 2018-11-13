@@ -3,7 +3,7 @@ CreateUser.addEventListener('submit', (e) => {
   e.preventDefault()
   const username = CreateUser.querySelector('.username').value
   const password = CreateUser.querySelector('.password').value
-  post('/createPayload', { username, password })
+  post('/api', { username, password })
 })
 
 const Login = document.querySelector('.Login')
